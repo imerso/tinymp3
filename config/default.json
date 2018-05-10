@@ -1,0 +1,10 @@
+{
+	"SYSTEM": {
+		"port": "3000"
+	}
+	,
+	"PATHS": {
+		"music": "server/Media/Music"
+	}
+}
+

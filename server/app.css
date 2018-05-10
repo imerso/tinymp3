@@ -1,0 +1,99 @@
+/*
+//
+// TinyMP3 Player v1.0
+// Written by Vander R. N. Dias - a.k.a. imerso / imersiva.com
+//
+*/
+
+/* -------------------------------------------------- */
+/* PORTRAIT OVERRIDES */
+/* -------------------------------------------------- */
+
+@media screen and (orientation: portrait)
+{
+}
+
+
+/* -------------------------------------------------- */
+/* LANDSCAPE OVERRIDES */
+/* -------------------------------------------------- */
+
+@media screen and (orientation: landscape)
+{
+}
+
+
+.App
+{
+}
+
+
+@font-face
+{
+  font-family: 'exo2b';
+  src: url('Exo2-Bold.otf');
+}
+
+
+/* Document body setup */
+body
+{
+  font-family:'exo2b';
+
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+
+  font-family: sans-serif;
+  font-size: 16px;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+
+/* Make any borders inside the div percentages, so div sizes are not affected */
+div
+{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+/* ms-iconbutton is for a button with only an icon, no text */
+.ms-iconbutton
+{
+  background: #507040;
+  color: #FFFFFF;
+  outline: none;
+  border: none;
+  cursor:pointer;
+}
+.ms-iconbutton:hover
+{
+  background: #509050;
+}
+
+
+.ms-toast
+{
+  position: absolute;
+  bottom: 3vmin;
+  left: 3vmin;
+  width: 40vw;
+  height: 5vh;
+  padding-top: 1.5vh;
+  padding-left: 2vw;
+  font-size: 1.9vmin;
+  background: #305080;
+  color: #FFFFB0;
+  box-shadow: 10px 10px 64px 0px rgba(0,0,0,0.75);
+}
+
