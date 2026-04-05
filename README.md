@@ -16,8 +16,10 @@ Hopefully that is not considered a legal infringement.
 ```
 git clone https://github.com/imerso/tinymp3.git
 
+
+# as it is old and uses old packages, we need to use the --legacy-peer-deps on the npm install.
 cd tinymp3
-npm install
+npm install --legacy-peer-deps
 npm run build
 ```
 

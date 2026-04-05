@@ -7,12 +7,15 @@ import React, { Component } from 'react';
 import './MusicList.css';
 
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
-import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
-import Collapse from 'material-ui/transitions/Collapse';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
-
+// Replace the standard imports with these:
+const ListItem = require('@material-ui/core/ListItem').default || require('@material-ui/core/ListItem');
+const ListItemIcon = require('@material-ui/core/ListItemIcon').default || require('@material-ui/core/ListItemIcon');
+const ListItemText = require('@material-ui/core/ListItemText').default || require('@material-ui/core/ListItemText');
+const List = require('@material-ui/core/List').default || require('@material-ui/core/List');
+const Collapse = require('@material-ui/core/Collapse').default || require('@material-ui/core/Collapse');
+const ExpandLess = require('@material-ui/icons/ExpandLess').default || require('@material-ui/icons/ExpandLess');
+const ExpandMore = require('@material-ui/icons/ExpandMore').default || require('@material-ui/icons/ExpandMore');
+const withStyles = require('@material-ui/core/styles/withStyles').default || require('@material-ui/core/styles/withStyles');
 
 // Some basic listitem custom styling
 const styles = theme =>
@@ -215,7 +218,7 @@ class MusicList extends Component
 				<div key={dirKey}>
 					<ListItem button className={classes.root}>
 						<ListItemIcon onClick={() => this.onClickPath(openIndex)}>
-							<img src={this.state.list[d].icon} />
+							<img src={this.state.list[d].icon} style={{ width: 24, height: 24 }} />
 						</ListItemIcon>
 						<ListItemText classes={{ primary: classes.root }} onClick={() => this.onClickPath(openIndex)} inset primary={this.state.list[d].path} />
 						{this.state.open[openIndex] ? <ExpandLess /> : <ExpandMore />}
